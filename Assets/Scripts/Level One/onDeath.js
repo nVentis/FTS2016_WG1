@@ -15,6 +15,4 @@ function Update () {
 		Debug.Log("You are dead. Respawn imminent...");
 		Application.LoadLevel("StartScene");
 	}
-	//if ()
-	//	SceneManager.LoadSceneAsync
 }
