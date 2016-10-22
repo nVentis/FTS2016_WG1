@@ -7,3 +7,7 @@ function Start () {
 function Update () {
 
 }
+
+function OnTriggerEnter(other : Collider) {
+	Debug.Log("Entered");
+}
