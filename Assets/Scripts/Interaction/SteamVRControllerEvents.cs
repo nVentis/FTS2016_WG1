@@ -13,11 +13,8 @@ public class SteamVRControllerEvents : MonoBehaviour
 
     public float m_TriggerIntensity;
 
-<<<<<<< HEAD
     public Vector2 m_TouchPosition;
 
-=======
->>>>>>> e7b90ec0f52a034c1362dadd8000d438d0e80b9d
     #endregion
 
     #region Private Vars
@@ -28,11 +25,7 @@ public class SteamVRControllerEvents : MonoBehaviour
 
     // -----------------------------------------------------------------------------
 
-<<<<<<< HEAD
     public void Start () 
-=======
-    void Start () 
->>>>>>> e7b90ec0f52a034c1362dadd8000d438d0e80b9d
 	{
         SteamVR_TrackedObject SteamVRTrackedObject = GetComponent<SteamVR_TrackedObject>();
 
@@ -41,11 +34,7 @@ public class SteamVRControllerEvents : MonoBehaviour
 
     // -----------------------------------------------------------------------------
 
-<<<<<<< HEAD
     public void Update () 
-=======
-    void Update () 
->>>>>>> e7b90ec0f52a034c1362dadd8000d438d0e80b9d
 	{
         // -----------------------------------------------------------------------------
         // Status check
@@ -57,7 +46,6 @@ public class SteamVRControllerEvents : MonoBehaviour
             return;
         }
 
-<<<<<<< HEAD
         if (Debug.isDebugBuild)
         {
             m_GripPressed            = GetPressGrip();
@@ -70,15 +58,6 @@ public class SteamVRControllerEvents : MonoBehaviour
 
             m_TouchPosition = GetTouchPosition();
         }
-=======
-        m_GripPressed            = GetPressGrip();
-        m_TriggerPressed         = GetPressTrigger();
-        m_ApplicationMenuPressed = GetPressApplicationMenu();
-        m_TouchpadPressed        = GetPressTouchpad();
-        m_TouchpadTouched        = GetTouchTouchpad();
-
-        m_TriggerIntensity = GetTriggerIntensity();
->>>>>>> e7b90ec0f52a034c1362dadd8000d438d0e80b9d
     }
 
     // -----------------------------------------------------------------------------
@@ -192,7 +171,6 @@ public class SteamVRControllerEvents : MonoBehaviour
     {
         return m_NativeController.GetAxis(Valve.VR.EVRButtonId.k_EButton_SteamVR_Trigger).x;
     }
-<<<<<<< HEAD
 
     // -----------------------------------------------------------------------------
 
@@ -200,6 +178,4 @@ public class SteamVRControllerEvents : MonoBehaviour
     {
         return m_NativeController.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis0);
     }
-=======
->>>>>>> e7b90ec0f52a034c1362dadd8000d438d0e80b9d
 }
