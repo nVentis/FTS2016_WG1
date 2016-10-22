@@ -15,7 +15,11 @@ public class LaserPointer : MonoBehaviour
 
     #region Private Vars
 
+<<<<<<< HEAD
     GameVRController m_ControllerEvents;
+=======
+    SteamVRControllerEvents m_ControllerEvents;
+>>>>>>> e7b90ec0f52a034c1362dadd8000d438d0e80b9d
 
     LineRenderer m_LineRenderer;
 
@@ -23,7 +27,11 @@ public class LaserPointer : MonoBehaviour
 
     void Start ()
     {
+<<<<<<< HEAD
         m_ControllerEvents = GetComponent<GameVRController>();
+=======
+        m_ControllerEvents = GetComponent<SteamVRControllerEvents>();
+>>>>>>> e7b90ec0f52a034c1362dadd8000d438d0e80b9d
 
         m_LineRenderer = GetComponent<LineRenderer>();
 
@@ -38,7 +46,11 @@ public class LaserPointer : MonoBehaviour
     {
         m_LineRenderer.enabled = false;
 
+<<<<<<< HEAD
         if (m_ControllerEvents.GetPressTouchpadButton1())
+=======
+        if (m_ControllerEvents.GetPressTrigger())
+>>>>>>> e7b90ec0f52a034c1362dadd8000d438d0e80b9d
 	    {
             StopCoroutine("ShowLaser");
             StartCoroutine("ShowLaser");
