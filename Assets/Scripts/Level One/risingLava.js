@@ -1,14 +1,14 @@
 ﻿#pragma strict
 
+var maxHeight = 10;
+var Speed = 0.2; // in m per s
+
 function Start () {
 
 }
 
-var maxHeight = 10;
-var Speed = 1; // in m per s
-
 function Update () {
 	if (transform.position.y < maxHeight) {
-		transform.Translate(Vector3.up * Time.deltaTime, Space.World);
+		transform.Translate(Vector3.up * Time.deltaTime * Speed, Space.World);
 	}
 }
