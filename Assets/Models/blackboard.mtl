@@ -1,0 +1,13 @@
+# Blender MTL File: 'BAUM.blend'
+# Material Count: 1
+
+newmtl blackboard
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.002354 0.085226 0.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:\Users\efcuser\FTS2016_WG1\Assets\Textures\blackboard.png
