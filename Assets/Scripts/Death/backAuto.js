@@ -10,13 +10,13 @@ function Start () {
 function FixedUpdate () {
 	currentTime = currentTime + Time.deltaTime;
 
-	if (currentTime > 2.0 && !alreadyPlaying) {
+	if (currentTime > 0.5 && !alreadyPlaying) {
 		alreadyPlaying = true;
 		var respawnSound = GetComponent.<AudioSource>();
 		respawnSound.Play();
 	}
 
-	if (currentTime > 5.0) {
+	if (currentTime > 6.0) {
 		Application.LoadLevel("StartScene");
 	}
 }
