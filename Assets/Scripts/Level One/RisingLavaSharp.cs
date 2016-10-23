@@ -9,6 +9,7 @@ public class RisingLavaSharp : MonoBehaviour {
 	public float Speed = 0.1f; // in m per s
 	public float currentTime = 0.0f;
 	public WinArea m_WinAreaScript;
+	public GameObject winSoundObject;
 
 	private bool m_IsActive = true;
 
@@ -33,6 +34,7 @@ public class RisingLavaSharp : MonoBehaviour {
                     player.transform.position = new Vector3(m_TargetPosition.position.x, m_TargetPosition.position.y, m_TargetPosition.position.z);
 
 					m_IsActive = false;
+					winSoundObject.GetComponent<AudioSource>().Play();
 				}else{
 					Application.LoadLevel("Death");
 				}
