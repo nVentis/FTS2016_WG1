@@ -9,7 +9,7 @@ function Start () {
 function FixedUpdate () {
 	currentTime = currentTime + Time.deltaTime;
 
-	if (currentTime > 6.0) {
+	if (currentTime > 12.0) {
 		Application.LoadLevel("StartScene Intro");
 	}
 }
