@@ -3,6 +3,8 @@ using System.Collections;
 
 public class RisingLavaSharp : MonoBehaviour {
 
+    public GameObject player;
+    public Transform m_TargetPosition;
 	public float maxHeight = 32.98f;
 	public float Speed = 0.2f; // in m per s
 	public float currentTime = 0.0f;
@@ -21,7 +23,7 @@ public class RisingLavaSharp : MonoBehaviour {
 		} else {
 			if (currentTime >= 8) {
 				if(m_WinAreaScript.GetIsInside()){
-					Application.LoadLevel("Win");
+                    player.transform.position = new Vector3(m_TargetPosition.position.x, m_TargetPosition.position.y, m_TargetPosition.position.z);
 				}else{
 					Application.LoadLevel("Death");
 				}
