@@ -8,7 +8,10 @@ public class RisingLavaSharp : MonoBehaviour {
 	public float maxHeight = 32.98f;
 	public float Speed = 0.1f; // in m per s
 	public float currentTime = 0.0f;
-	public WinArea m_WinAreaScript;
+	public WinArea m_WinAreaScript_One;
+	public WinArea m_WinAreaScript_Two;
+	public WinArea m_WinAreaScript_Three;
+	public WinArea m_WinAreaScript_Four;
 	public GameObject winSoundObject;
 
 	private bool m_IsActive = true;
@@ -20,7 +23,6 @@ public class RisingLavaSharp : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
 		if (!m_IsActive)
 			return;
 
@@ -29,7 +31,10 @@ public class RisingLavaSharp : MonoBehaviour {
 			transform.Translate(Vector3.up * Time.deltaTime * Speed, Space.World);
 		} else {
 			if (currentTime >= 8) {
-				if(m_WinAreaScript.GetIsInside())
+				if(	m_WinAreaScript_One.GetIsInside() ||
+					m_WinAreaScript_Two.GetIsInside() ||
+					m_WinAreaScript_Three.GetIsInside() ||
+					m_WinAreaScript_Four.GetIsInside())
 				{
                     player.transform.position = new Vector3(m_TargetPosition.position.x, m_TargetPosition.position.y, m_TargetPosition.position.z);
 
